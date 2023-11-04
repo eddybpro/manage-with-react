@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(228, 39%, 23%);
+  --color-brand-2: hsl(227, 12%, 61%);
+
+  --color-site-1: hsl(233, 12%, 13%);
+  --color-site-2: hsl(12, 88%, 59%);
+  --color-site-3: hsl(13, 100%, 96%);
+  --color-site-4: hsl(0, 0%, 98%);
+
+  --font-vietnam: "Be Vietnam Pro", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-vietnam);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  padding: 3rem 2rem;
+  background-color: var(--color-site-1);
+}
+
+.FormBox {
+  display: grid;
+  grid-template-columns: 1fr 8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.FormBox-Label {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.FormBox-Input {
+  display: block;
+  width: 100%;
+  padding: 1.25rem 2rem;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+}
+
+.error {
+  position: absolute;
+  left: 1.5rem;
+  bottom: -2.2rem;
+  color: var(--color-site-2);
+  font-size: 1.5rem;
+}
+
+.FormBox-Btn {
+  background-color: var(--color-site-2);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-site-4);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2rem;
+  padding: 1.25rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.FormBox-Btn:hover {
+  filter: brightness(150%);
+}
+
+.FooterLinks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.FooterLinks-Link {
+  margin-bottom: 1rem;
+}
+
+.FooterLinks-Link > a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-site-4);
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterLinks-Link > a:hover {
+  color: var(--color-site-2);
+}
+
+.SocialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.socialIcon {
+  font-size: 3rem;
+  color: var(--color-site-4);
+  transition: all 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: var(--color-site-2);
+}
+
+.FooterLogo {
+  display: block;
+  width: 14rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.FooterLogo > img {
+  width: 100%;
+  filter: invert(4000%) sepia(1000%) saturate(250%) hue-rotate(338deg)
+    brightness(108%) contrast(304%);
+}
+
+.Copyright {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .FooterLogo {
+    grid-area: 1/1/2/2;
+    margin: 0;
+  }
+
+  .SocialIcons {
+    grid-area: 2/1/2/1;
+  }
+
+  .FormBox {
+    grid-area: 1/4/1/4;
+  }
+
+  .FooterLinks {
+    grid-area: 1/2/3/4;
+  }
+
+  .FooterLinks-Link {
+    margin-bottom: 2rem;
+  }
+
+  .Copyright {
+    grid-area: 2/4/2/4;
+  }
+}
